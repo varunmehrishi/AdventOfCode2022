@@ -3,6 +3,7 @@ use std::{path::Path, env};
 mod utils;
 mod calorie_counting;
 mod rock_paper_scissors;
+mod rucksack_reorganization;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -16,4 +17,5 @@ fn main() {
 
     calorie_counting::solve(&base.join("calorie_counting.txt"));
     rock_paper_scissors::solve(&base.join("rock_paper_scissors.txt"));
+    rucksack_reorganization::solve(&base.join("rucksack_reorganization.txt"));
 }
