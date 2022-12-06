@@ -4,7 +4,7 @@ mod input;
 
 pub fn solve(path: &Path) {
     let rucksacks =
-        input::read_values(path).unwrap_or_else(|_| panic!("Unable to read {:?}", path));
+        input::read_values(path).unwrap_or_else(|_| panic!("Unable to read {path:?}"));
 
     let mut score = 0;
     for rucksack in &rucksacks {
@@ -18,7 +18,7 @@ pub fn solve(path: &Path) {
             .sum();
         score += sum;
     }
-    println!("Rucksack Part 1 {}", score);
+    println!("Rucksack Part 1 {score}");
 
     let mut score = 0;
     rucksacks.chunks_exact(3).for_each(|chunk| {
@@ -32,7 +32,7 @@ pub fn solve(path: &Path) {
         let sum: i32 = common.into_iter().map(compute_priority).sum();
         score += sum;
     });
-    println!("Rucksack Part 2 {}", score);
+    println!("Rucksack Part 2 {score}");
 }
 
 fn get_common_chars(a: &[char], b: &[char]) -> HashSet<char> {

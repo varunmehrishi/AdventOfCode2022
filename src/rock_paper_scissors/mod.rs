@@ -61,19 +61,19 @@ fn get_play(op: Hand, outcome: Outcome) -> Hand {
 }
 
 pub fn solve(path: &Path) {
-    let values = input::read_values(path).unwrap_or_else(|_| panic!("Unable to read {:?}", path));
+    let values = input::read_values(path).unwrap_or_else(|_| panic!("Unable to read {path:?}"));
     let mut score = 0;
     for (op, my) in values {
         let outcome = outcome(op, my);
         score += score_for_hand(my) + score_for_outcome(outcome);
     }
-    println!("Score for Part 1 {}", score);
+    println!("Score for Part 1 {score}");
 
-    let values = input::read_values_part_2(path).unwrap_or_else(|_| panic!("Unable to read {:?}", path));
+    let values = input::read_values_part_2(path).unwrap_or_else(|_| panic!("Unable to read {path:?}"));
     let mut score = 0;
     for (op, outcome) in values {
         let my = get_play(op, outcome);
         score += score_for_hand(my) + score_for_outcome(outcome);
     }
-    println!("Score for Part 2 {}", score);
+    println!("Score for Part 2 {score}");
 }
