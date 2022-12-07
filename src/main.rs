@@ -10,6 +10,7 @@ mod rucksack_reorganization;
 mod camp_cleanup;
 mod supply_stacks;
 mod tuning_trouble;
+mod no_space_left_on_device;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -27,4 +28,5 @@ fn main() {
     camp_cleanup::solve(&base.join("camp_cleanup.txt"));
     supply_stacks::solve(&base.join("supply_stacks.txt"));
     tuning_trouble::solve(&base.join("tuning_trouble.txt"));
+    no_space_left_on_device::solve(&base.join("no_space_left_on_device.txt"));
 }
