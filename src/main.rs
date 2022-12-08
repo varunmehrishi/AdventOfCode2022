@@ -11,6 +11,7 @@ mod camp_cleanup;
 mod supply_stacks;
 mod tuning_trouble;
 mod no_space_left_on_device;
+mod treetop_tree_house;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -29,4 +30,5 @@ fn main() {
     supply_stacks::solve(&base.join("supply_stacks.txt"));
     tuning_trouble::solve(&base.join("tuning_trouble.txt"));
     no_space_left_on_device::solve(&base.join("no_space_left_on_device.txt"));
+    treetop_tree_house::solve(&base.join("treetop_tree_house.txt"));
 }
