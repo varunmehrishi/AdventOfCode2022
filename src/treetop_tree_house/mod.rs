@@ -79,7 +79,7 @@ pub fn solve(path: &Path) {
 }
 
 pub fn is_boundary((i, j): (usize, usize), (m, n): (usize, usize)) -> bool {
-    i == 0 || j == 0 || i == m || j == n
+    i == 0 || j == 0 || i == m - 1 || j == n - 1
 }
 
 #[derive(Debug, Clone, Copy)]
