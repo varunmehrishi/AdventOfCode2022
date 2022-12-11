@@ -14,6 +14,7 @@ mod no_space_left_on_device;
 mod treetop_tree_house;
 mod rope_bridge;
 mod cathode_ray_tube;
+mod monkey_in_the_middle;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -35,4 +36,5 @@ fn main() {
     treetop_tree_house::solve(&base.join("treetop_tree_house.txt"));
     rope_bridge::solve(&base.join("rope_bridge.txt"));
     cathode_ray_tube::solve(&base.join("cathode_ray_tube.txt"));
+    monkey_in_the_middle::solve(&base.join("monkey_in_the_middle.txt"));
 }
