@@ -15,6 +15,7 @@ mod treetop_tree_house;
 mod rope_bridge;
 mod cathode_ray_tube;
 mod monkey_in_the_middle;
+mod hill_climbing_algorithm;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -37,4 +38,5 @@ fn main() {
     rope_bridge::solve(&base.join("rope_bridge.txt"));
     cathode_ray_tube::solve(&base.join("cathode_ray_tube.txt"));
     monkey_in_the_middle::solve(&base.join("monkey_in_the_middle.txt"));
+    hill_climbing_algorithm::solve(&base.join("hill_climbing_algorithm.txt"));
 }
