@@ -13,4 +13,7 @@ pub enum Error {
 
     #[error(transparent)]
     ParseInt(#[from] std::num::ParseIntError),
+
+    #[error(transparent)]
+    Serde(#[from] serde_json::Error),
 }
