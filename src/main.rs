@@ -17,6 +17,7 @@ mod cathode_ray_tube;
 mod monkey_in_the_middle;
 mod hill_climbing_algorithm;
 mod distress_signal;
+mod regolith_reservoir;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -41,4 +42,5 @@ fn main() {
     monkey_in_the_middle::solve(&base.join("monkey_in_the_middle.txt"));
     hill_climbing_algorithm::solve(&base.join("hill_climbing_algorithm.txt"));
     distress_signal::solve(&base.join("distress_signal.txt"));
+    regolith_reservoir::solve(&base.join("regolith_reservoir.txt"), false);
 }
