@@ -19,6 +19,8 @@ mod hill_climbing_algorithm;
 mod distress_signal;
 mod regolith_reservoir;
 mod beacon_exclusion_zone;
+mod pyroclastic_flow;
+mod boiling_boulders;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -45,4 +47,6 @@ fn main() {
     distress_signal::solve(&base.join("distress_signal.txt"));
     regolith_reservoir::solve(&base.join("regolith_reservoir.txt"), false);
     beacon_exclusion_zone::solve(&base.join("beacon_exclusion_zone.txt"));
+    pyroclastic_flow::solve(&base.join("pyroclastic_flow.txt"));
+    boiling_boulders::solve(&base.join("boiling_boulders.txt"));
 }
